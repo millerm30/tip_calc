@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Michael Miller">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/output.css">
+  <title>Tip Calculator</title>
+</head>
+<body class="flex justify-center items-center bg-[#4e4cff]">
+  <div id="calculator" class="w-3/4 mt-12 flex flex-col bg-white rounded-xl px-16 py-14 md:w-1/2 lg:w-1/3">
+    <label for="billTotal">Bill</label>
+    <input type="number" oninput="calculateTip()" onchange="calculateTip()" id="billAmount" placeholder="Enter your bill" class="my-4 py-2 bg-[#f1f1f1] px-4 rounded focus:outline-[#4b49f1]">
+    <label for="tipPercentage" class="flex justify-between">
+      <span>Tip %</span>
+      <span id="tipPercentageText">15%</span>
+    </label>
+    <input type="range" id="tipPercentage" max="20" oninput="calculateTip()" onchange="calculateTip()" class="my-6 accent-[#4b49f1]">
+    <label for ="numberOfPeople" class="flex justify-between">
+      <span>No. of people</span>
+      <spane id="numberOfPeopleText">15</spane>
+    </label>
+    <input type="range" id="numberOfPeople" min="1" oninput="calculateTip()" onchange="calculateTip()" class="my-6 accent-[#4b49f1]">
+    <div id="result" class="w-full mt-6 p-4 bg-[#4b49f1] rounded-xl text-lg text-white">
+      <h5 class="my-4 flex justify-between">
+        <span>Tip Amount</span>
+        <span class="text-lg">$ 0.00</span>
+      </h5>
+      <h5 class="my-4 flex justify-between">
+        <span>Total</span>
+        <span class="text-lg">$ 0.00</span>
+      </h5>
+      <h5 class="my-4 flex justify-between">
+        <span>Each person pays</span>
+        <span class="text-lg">$ 0.00</span>
+      </h5>
+    </div>
+  </div>
+  <script src="javascript/script.js"></script>
+</body>
+</html>
